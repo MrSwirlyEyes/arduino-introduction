@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="10" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1084,11 +1084,11 @@
 <sheets>
 <sheet>
 <plain>
-<wire x1="-815.34" y1="-165.1" x2="-815.34" y2="-182.88" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="-815.34" y1="-182.88" x2="-769.62" y2="-182.88" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="-769.62" y1="-182.88" x2="-769.62" y2="-165.1" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="-769.62" y1="-165.1" x2="-815.34" y2="-165.1" width="0.1524" layer="97" style="shortdash"/>
-<text x="-792.48" y="-162.56" size="5.08" layer="97" font="vector" ratio="20" align="bottom-center">LED</text>
+<wire x1="-815.34" y1="-144.78" x2="-815.34" y2="-187.96" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-815.34" y1="-187.96" x2="-792.48" y2="-187.96" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-792.48" y1="-187.96" x2="-792.48" y2="-144.78" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-792.48" y1="-144.78" x2="-815.34" y2="-144.78" width="0.1524" layer="97" style="shortdash"/>
+<text x="-802.64" y="-142.24" size="5.08" layer="97" font="vector" ratio="20" align="bottom-center">LED</text>
 <wire x1="-883.92" y1="-144.78" x2="-883.92" y2="-200.66" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-883.92" y1="-200.66" x2="-820.42" y2="-200.66" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-820.42" y1="-200.66" x2="-820.42" y2="-144.78" width="0.1524" layer="97" style="shortdash"/>
@@ -1096,15 +1096,15 @@
 <text x="-850.9" y="-142.24" size="5.08" layer="97" font="vector" ratio="20" align="bottom-center">ARDUINO UNO</text>
 </plain>
 <instances>
-<instance part="LED1" gate="G$1" x="-797.56" y="-172.72" smashed="yes" rot="R90">
-<attribute name="NAME" x="-797.814" y="-172.466" size="1.27" layer="95" font="vector" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="-794.766" y="-172.466" size="0.635" layer="96" font="vector" ratio="10" rot="R90" align="top-left"/>
+<instance part="LED1" gate="G$1" x="-805.18" y="-157.48" smashed="yes">
+<attribute name="NAME" x="-804.926" y="-157.226" size="1.27" layer="95" font="vector" ratio="10"/>
+<attribute name="VALUE" x="-804.926" y="-160.274" size="0.635" layer="96" font="vector" ratio="10" align="top-left"/>
 </instance>
-<instance part="R1" gate="G$1" x="-784.86" y="-172.72" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="-784.86" y="-173.863" size="0.635" layer="96" font="vector" ratio="10" rot="MR0" align="top-center"/>
-<attribute name="NAME" x="-784.86" y="-171.6024" size="1.27" layer="95" font="vector" ratio="10" rot="MR0" align="bottom-center"/>
+<instance part="R1" gate="G$1" x="-805.18" y="-170.18" smashed="yes" rot="R90">
+<attribute name="VALUE" x="-804.037" y="-170.18" size="0.635" layer="96" font="vector" ratio="10" rot="R90" align="top-center"/>
+<attribute name="NAME" x="-806.2976" y="-170.18" size="1.27" layer="95" font="vector" ratio="10" rot="R90" align="bottom-center"/>
 </instance>
-<instance part="GND1" gate="GND" x="-777.24" y="-177.8" smashed="yes"/>
+<instance part="GND1" gate="GND" x="-805.18" y="-180.34" smashed="yes"/>
 <instance part="GND3" gate="GND" x="-876.3" y="-167.64" smashed="yes"/>
 <instance part="ARDUINO1" gate="G$1" x="-853.44" y="-170.18" smashed="yes">
 <attribute name="NAME" x="-853.44" y="-149.352" size="1.27" layer="95" font="vector" ratio="10" align="bottom-center"/>
@@ -1123,9 +1123,8 @@
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="-779.78" y1="-172.72" x2="-777.24" y2="-172.72" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="GND" pin="GND"/>
-<wire x1="-777.24" y1="-175.26" x2="-777.24" y2="-172.72" width="0.1524" layer="91"/>
+<wire x1="-805.18" y1="-177.8" x2="-805.18" y2="-175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED1" class="0">
@@ -1136,15 +1135,15 @@
 </segment>
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="-800.1" y1="-172.72" x2="-802.64" y2="-172.72" width="0.1524" layer="91"/>
-<label x="-802.64" y="-172.72" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+<wire x1="-805.18" y1="-154.94" x2="-805.18" y2="-152.4" width="0.1524" layer="91"/>
+<label x="-805.18" y="-152.4" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="K"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="-792.48" y1="-172.72" x2="-789.94" y2="-172.72" width="0.1524" layer="91"/>
+<wire x1="-805.18" y1="-162.56" x2="-805.18" y2="-165.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
