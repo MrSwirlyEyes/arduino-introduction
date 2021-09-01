@@ -1,4 +1,4 @@
-// Program to digital read from a button with an external pull-down resistor and toggle a state
+// Program to digital read from a button with an internal pull-up resistor and toggle a state
 
 
 
@@ -16,6 +16,7 @@ void setup() {
 }
 
 void loop() {
+  // Variables to keep track of state (set to 1, since pull-up default state is HIGH)
   static boolean state = 1;
   static boolean lastState = 1;
 
