@@ -20,7 +20,7 @@
 #define led10 11
 
 // Define LED array
-byte leds[NUM_LEDS] = {
+uint8_t leds[NUM_LEDS] = {
   led1,
   led2,
   led3,
@@ -35,14 +35,14 @@ byte leds[NUM_LEDS] = {
 
 void setup() {
   // Configure ALL led pins to be a digital OUTPUT
-  for(int i = 0; i < NUM_LEDS; i++) {
+  for(uint8_t i = 0; i < NUM_LEDS; i++) {
     pinMode(leds[i],OUTPUT);
   }
 }
 
 void loop() { 
   // Write all LEDs HIGH/ON
-  for(int i = 0; i < NUM_LEDS; i++) {
+  for(uint8_t i = 0; i < NUM_LEDS; i++) {
     digitalWrite(leds[i],HIGH);
 
     delay(50);
@@ -51,7 +51,7 @@ void loop() {
   delay(500);
 
   // Write all LEDs LOW/OFF
-  for(int i = 0; i < NUM_LEDS; i++) {
+  for(uint8_t i = 0; i < NUM_LEDS; i++) {
     digitalWrite(leds[i],LOW);
 
     delay(50);
