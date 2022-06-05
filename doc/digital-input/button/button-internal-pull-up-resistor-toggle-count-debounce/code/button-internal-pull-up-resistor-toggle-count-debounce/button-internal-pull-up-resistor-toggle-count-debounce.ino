@@ -7,8 +7,8 @@
 // Assign button alias to pin 2
 #define button 2
 
-static unsigned long timeStamp;
-unsigned long debounceDelay = 10; // (ms)
+static uint32_t timeStamp;
+uint32_t debounceDelay = 10; // (ms)
 
 void setup() {
   // Start Serial Monitor
